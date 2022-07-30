@@ -1,0 +1,22 @@
+<div class="container" class="col-md-6 offset-md-3">
+    <h3>Add Docor Details</h3>
+    <form (ngSubmit)="addDoctor()">
+        <div class="form-group">
+            <label>Doctor's Name</label>
+            <input type="text" class="form-control" id="docname" [(ngModel)]="doctor.name" name="docname" ng-required="true" >
+        </div>
+        <div class="form-group">
+            <label>Age</label>
+            <input type="number" class="form-control" id="age" [(ngModel)]="doctor.age" name="age"   >
+        </div>
+        <div class="form-group">
+            <label>Gender</label>
+            <input type="text" class="form-control" [(ngModel)]="doctor.gender" id="gender" name="gender"   >
+        </div>
+        <div class="form-group">
+            <label>Specialization</label>
+            <input type="text" class="form-control" [(ngModel)]="doctor.specialization" id="Specialization" name="Specialization"   >
+        </div><br/>
+        <button class="btn btn-success" type="submit">Submit</button>
+    </form>
+</div>

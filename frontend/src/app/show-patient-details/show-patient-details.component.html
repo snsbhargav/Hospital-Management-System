@@ -1,0 +1,31 @@
+<div class="input-group mb-3 container" style="margin-top:20px">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="inputGroup-sizing-default">Enter Patient Id</span>
+    </div>
+    <input type="number" class="form-control" [(ngModel)]=data aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+    <span><button class="btn btn-primary" style="margin-left: 5px;" (click)="patientData($event)"> Get Data</button></span>
+</div>
+<br/><br/>
+        <div class="container">
+            <table class="table table-striped" style="background-color: #e3f2fd;">
+                <thead>
+                    <tr>
+                        <th>Name of the Patient</th>
+                        <th>Age</th>
+                        <th>Visited Doctor</th>
+                        <th>Date Of Visit</th>
+                        <th>Doctor Prescription</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>{{patient.name}}</td>
+                        <td>{{patient.age}}</td>
+                        <td>{{patient.vistedDoctor}}</td>
+                        <td>{{patient.dateOfVisit}}</td>
+                        <td>{{patient.prescription}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        

@@ -1,0 +1,6 @@
+After ruuning frontend and backend open the URI in browser were web security is disabled.
+
+
+To disable in chrome:(WIN+R)
+
+chrome.exe --user-data-dir="C://Chrome dev session" --disable-web-security

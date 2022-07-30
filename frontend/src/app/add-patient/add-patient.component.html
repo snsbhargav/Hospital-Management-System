@@ -1,0 +1,36 @@
+<div class="container" class="col-md-6 offset-md-3">
+    <h3>Add Patient Details</h3>
+    <form (ngSubmit)="addPatient()">
+        <div class="form-group">
+            <label>Patient's Name</label>
+            <input type="text" class="form-control" id="patientName" [(ngModel)]="patient.name" name="patientName">
+        </div>
+        <div class="form-group">
+            <label>Age</label>
+            <input type="text" class="form-control" id="age" [(ngModel)]="patient.age" name="age">
+        </div>
+
+        <div class="form-group">
+            <label>Date of Visit</label>
+            <input type="date" placeholder="YYYY-MM-DD" class="form-control" id="dateOfVisit"
+                [(ngModel)]="patient.dateOfVisit" name="dateOfVisit">
+        </div>
+        <div class="form-group">
+            <label>Select a Doctor</label>
+            <select class="form-control" #select (change)="update($event,select.value)" >
+                <option value="default" selected>--Select a Doctor--</option>
+                <option *ngFor="let doc of doctors" [value]=[doc.id,doc.name] >
+                    {{doc.name}}
+                </option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label>Doctor's Prescription</label>
+            <input type="textarea" class="form-control" id="prescription"
+                [(ngModel)]="patient.prescription" name="prescription">
+        </div>
+        <br />
+
+        <button class="btn btn-success" type="submit">Submit</button>
+    </form>
+</div>

@@ -1,0 +1,31 @@
+<div class="container"><br/>
+    <select class="form-control" #select (change)="update($event,select.value)">
+        <option value="default" selected>--Select Doctor for details-- </option>
+        <option *ngFor="let doc of doctors" [value]=doc.id>
+            {{doc.name}}
+        </option>
+    </select>
+
+    <div class="container">
+        <br/><br/>
+        <div class="container">
+            <table class="table table-striped" style="background-color: #e3f2fd;">
+                <thead>
+                    <tr>
+                        <th>Name of the Doctor</th>
+                        <th>Specialization</th>
+                        <th>Number of Patient Attended</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>{{doctor.name}}</td>
+                        <td>{{doctor.specialization}}</td>
+                        <td>{{doctor.numOfPatients}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        
+        </div>
+
+    </div>
